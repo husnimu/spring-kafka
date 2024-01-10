@@ -1,0 +1,23 @@
+@url = http://localhost:3000
+###
+GET {{url}}
+###
+GET {{url}}/4
+###
+POST {{url}}
+Content-Type: application/json
+
+{
+  "title": "test",
+  "description": "test",
+  "createdAt": "2024-01-01 13:00:00"
+}
+###
+PUT {{url}}/1
+Content-Type: application/json
+
+{
+  "title": "test 1",
+  "description": "test 1",
+  "createdAt": "2024-01-01 13:00:00"
+}

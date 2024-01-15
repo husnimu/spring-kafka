@@ -1,0 +1,8 @@
+@url = http://localhost:3000/api/v1/message
+###
+POST {{url}}
+Content-Type: application/json
+
+{
+  "message" : "test1234"
+}

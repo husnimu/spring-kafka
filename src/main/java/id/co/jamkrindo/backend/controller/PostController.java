@@ -14,7 +14,9 @@ import id.co.jamkrindo.backend.model.Post;
 import id.co.jamkrindo.backend.model.dto.request.PostRequest;
 import id.co.jamkrindo.backend.service.PostService;
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 @RestController
 @AllArgsConstructor
 public class PostController {
@@ -22,6 +24,9 @@ public class PostController {
 
   @GetMapping
   public List<Post> getAll() {
+    log.info("Service method called using @Slf4j");
+    log.warn("Service method called using @Slf4j 1234");
+    log.error("fine woy");
     return postService.getAll();
   }
 

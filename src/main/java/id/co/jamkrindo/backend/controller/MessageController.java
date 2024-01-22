@@ -13,10 +13,10 @@ import id.co.jamkrindo.backend.model.dto.request.MessageRequest;
 @RequestMapping("api/v1/message")
 public class MessageController {
   @Autowired
-  private KafkaTemplate<String, String> kafkaTemplate;
+  private KafkaTemplate<String, Object> kafkaTemplate;
 
   @PostMapping
   public void publish(@RequestBody MessageRequest request) {
-    kafkaTemplate.send("topic", request.message());
+    kafkaTemplate.send("topic", request);
   }
 }

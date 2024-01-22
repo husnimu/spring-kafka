@@ -4,5 +4,6 @@ POST {{url}}
 Content-Type: application/json
 
 {
-  "message" : "test1234"
+  "message" : "test1234",
+  "tost" : "tost"
 }

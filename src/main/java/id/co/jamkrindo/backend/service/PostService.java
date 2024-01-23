@@ -3,6 +3,7 @@ package id.co.jamkrindo.backend.service;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import id.co.jamkrindo.backend.model.Post;
 import id.co.jamkrindo.backend.model.dto.request.PostRequest;
@@ -22,6 +23,7 @@ public class PostService {
     return postRepository.getById(id);
   }
 
+  @Transactional
   public Post insert(PostRequest postRequest) {
     return postRepository.insert(postRequest);
   }

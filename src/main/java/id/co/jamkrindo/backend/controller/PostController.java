@@ -24,9 +24,11 @@ public class PostController {
 
   @GetMapping
   public List<Post> getAll() {
+    // for (int i = 0; i < 100_000; i++) {
     log.info("Service method called using @Slf4j");
     log.warn("Service method called using @Slf4j 1234");
     log.error("fine woy");
+    // }
     return postService.getAll();
   }
 

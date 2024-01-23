@@ -1,10 +1,27 @@
 server:
   port: 3000
-logging:
-  level:
-    root: INFO
-  pattern:
-    console: "%d{yyyy-MM-dd HH:mm:ss} - %logger{36} - %msg%n"
+# logging:
+  # level:
+  #   root: INFO
+  #   org:
+  #     hibernate:
+  #       SQL: debug
+  #       type:
+  #         descriptor:
+  #           sql:
+  #             BasicBinder: TRACE
+  #   tast: warn
+  # pattern:
+  #   console: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - [%X{requestId}] - %msg%n"
+  # file:
+  #   name: myapp.log
+  # logback:
+  #   rollingpolicy:
+  #     max-file-size: 10MB
+  #     max-history: 10
+  #     total-size-cap: 100MB
+  # group:
+  #   tast: bcakend, id.co.jamkrindo.backend.controller
 spring:
   datasource:
     url: jdbc:mysql://localhost:3307/jdbc_api
@@ -13,7 +30,7 @@ spring:
   jpa:
     hibernate:
       ddl-auto: create-drop
-
+      show-sql: true
   kafka:
     bootstrap-servers: localhost:29092
 
